@@ -54,5 +54,5 @@ end
 
 puts Recipe.count
 puts Ingredient.count
-  binding.pry
+  # binding.pry
 0

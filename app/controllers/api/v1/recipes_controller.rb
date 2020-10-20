@@ -3,6 +3,11 @@ class Api::V1::RecipesController < ApplicationController
  recipe = Recipe.all
  render json: recipe
 end
+
+def create
+  recipe = Recipe.create(recipe_params)
+  render json: recipe
+end
 # def show
 #         recipe = Recipe.find_by(id: params[:id])
 #         if recipe
@@ -17,7 +22,7 @@ end
 
 private 
   def recipe_params
-   params.require(:recipe).permit(:title, :image, :readyInMinutes)
+   params.require(:recipe).permit(:title, :image, :readyInMinutes, :summary, :servings, :ingredients)
 
   end
 
