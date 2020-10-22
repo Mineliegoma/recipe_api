@@ -44,6 +44,44 @@ recipe_hash["readyInMinutes"]
    end
   end
 end
+
+#string = ["chicken", "pepper","cheese","parmeson"]
+# def usedIngredients(ing)
+
+  
+# end
+
+# result_1 = RestClient.get("https://api.spoonacular.com/recipes/findByIngredients?ingredients=#{@@usedIngredients}&apiKey=#{key}")
+# list_1 = JSON.parse(result_1.body)
+# list_1.each do ||
+# list_1.each do |ingredients|
+#  ingredients["title"]
+#  ingredients["usedIngredients"]
+#  ingredients["missedIngredients"]
+#  ingredients["image"]
+#  search = Search.
+
+# end 
+
+
+
+# def IngredientSearch(usedIngredients)
+ 
+# result_1 = RestClient.get("https://api.spoonacular.com/recipes/findByIngredients?ingredients=#{usedIngredients}&apiKey=#{KEY}")
+# list_1 = JSON.parse(result_1.body)
+
+
+# end
+# chicken_list= IngredientSearch("egg, chicken")
+# beef_list= IngredientSearch("beef, pepper")
+
+# put a method into a model
+# figure if class or instance .. 
+# front end to send infos to my backend (search bar or submit  input)
+# need a routes // controller (method that defines what the search information will do)
+# controller called your model mehtod and use a variable to receive the result.
+#send the variable to the frontend , receive it and render it 
+
  
 
 
@@ -54,5 +92,5 @@ end
 
 puts Recipe.count
 puts Ingredient.count
-  binding.pry
+  # binding.pry
 0

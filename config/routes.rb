@@ -1,5 +1,16 @@
 Rails.application.routes.draw do
- Rails.application.routes.draw do
+   namespace :api do
+    namespace :v1 do
+      resources :users, only: [:create]
+      post '/login', to: 'auth#create'
+      get '/profile', to: 'users#profile'
+    end
+  end
+  namespace :api do
+    namespace :v1 do
+      resources :searches
+    end
+  end
   namespace :api do
     namespace :v1 do
       resources :recipes 
@@ -16,4 +27,4 @@ end
 
 # 
 #   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.htmlend end
-end 
+# end 

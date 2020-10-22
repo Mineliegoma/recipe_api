@@ -7,6 +7,10 @@ class Api::V1::IngredientsController < ApplicationController
          ingredient= Ingredient.find(params[:id])
          render json: Ingredient
        end 
+       def create
+        ingredient= Ingredient.create!(ingredients_params)
+        render json: ingredient
+       end
   
 
   
